@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Numbers API App</title>
+</head>
+<body>
+
+<div class="jumbotron text-left">
+	<center><h3>FACTS</h3></center>
+
+	<center><form>
+		<div class="form-group">
+			<input type="text" class="form-control" ng-model="number">
+		</div>
+
+		<div> Note: To get a Random Fact, type in 'random' in the text field above and click on which type of Random Fact you want to get...!</div><br>
+
+		<div class="form-group">
+			<div>
+
+				<button type="button" class="btn btn-primary" ng-click="getDateFact()">
+					Date
+				</button>
+
+				<button type="button" class="btn btn-primary" ng-click="getMathFact()">
+					Math
+				</button>
+
+				<button type="button" class="btn btn-primary" ng-click="getTriviaFact()">
+					Trivia
+				</button>
+
+			</div>
+		</div>
+	</form></center>
+
+	<div style = "white-space: pre-wrap;">
+		<center><b>{{fact.type.toUpperCase()}}</b> ({{fact.number}}) </center>
+		<center> -	{{fact.text}}</center>
+	</div>
+</div>
+</body>
+</html>
